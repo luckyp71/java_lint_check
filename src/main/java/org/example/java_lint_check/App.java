@@ -1,6 +1,8 @@
 package org.example.java_lint_check;
 
 import java.util.logging.Logger;
+import java.util.List;
+import java.util.ArrayList;
 
 /*
  * If you'd like to do a lint check the good approach, just comment the bad approach's line of codes and uncomment the good one,
@@ -11,17 +13,25 @@ import java.util.logging.Logger;
 public class App {
 	
 	//Bad approach
-//	public static Logger logger = Logger.getLogger(App.class.getName());
+	public static Logger logger = Logger.getLogger(App.class.getName());
 	
 	//Good approach by adding final keyword
-	public static final Logger logger = Logger.getLogger(App.class.getName());
+//	public static final Logger logger = Logger.getLogger(App.class.getName());
 	
+	//Main method
     public static void main( String[] args ){
     	//Create app object
     	App app = new App();
     	
     	//Log the output
     	logger.info(String.valueOf(app.getName("Lucky")));
+    	
+    	
+    	//Bad approach
+    	List<String> list = new ArrayList<String>();
+    	
+    	//Good approach
+//    	List<String>list = new ArrayList<>();
     }
     
     public boolean getName(String name) {
